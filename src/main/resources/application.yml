@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/mall?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mappers/*.xml
+logging:
+  pattern:
+    console: "[%thread] %-5level %logger{36} - %msg%n"
+wx:
+  appId: wxd898fcb01713c658
+  mchiId: 1483469312
+  mchKey: 098F6BCD4621D373CADE4E832627B4F6
+  notifyUrl: http://spacejunk96.natapp1.cc/pay/notify
+  returnUrl: http://127.0.0.1
+
+
