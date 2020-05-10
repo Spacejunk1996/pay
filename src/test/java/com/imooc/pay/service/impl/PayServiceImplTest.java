@@ -1,13 +1,13 @@
 package com.imooc.pay.service.impl;
 
 import com.imooc.pay.PayApplicationTests;
+import com.imooc.pay.service.IPayService;
 import com.lly835.bestpay.enums.BestPayTypeEnum;
 import org.junit.Test;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Zixu Jiang
@@ -15,10 +15,13 @@ import static org.junit.Assert.*;
  */
 
 
-public class PayServiceTest extends PayApplicationTests {
+public class PayServiceImplTest extends PayApplicationTests {
 
     @Autowired
-    private PayService payService;
+    private IPayService payService;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
 
     @Test
     public void create() {
