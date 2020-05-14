@@ -32,7 +32,7 @@ public class PayController {
     @GetMapping("/create")
     public ModelAndView create(@RequestParam("orderId") String orderId,
                                @RequestParam("amount") BigDecimal amount,
-                               @RequestParam("type") BestPayTypeEnum bestPayTypeEnum) {
+                               @RequestParam("payType") BestPayTypeEnum bestPayTypeEnum) {
 
         PayResponse response = payService.create(orderId, amount, bestPayTypeEnum);
         Map<String, String> map = new HashMap<>();
